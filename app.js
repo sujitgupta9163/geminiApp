@@ -33,5 +33,11 @@ app.post('/getResponse' , (req , resp )=>{
       });
 })
 
+app.get('*' , (req , resp)=>{
+  resp.status(404).json({
+    meg : "bad request"
+  })
+})
+
 
 module.exports = app;
